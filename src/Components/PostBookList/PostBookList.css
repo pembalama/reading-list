@@ -1,0 +1,56 @@
+
+/* input {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+} */
+
+/* .addToList {
+    background-color: black;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    color: white;
+
+} */
+
+.addToListMain {
+    align-items: center;
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+    /* margin: auto; */
+}
+
+
+
+.InputImage{
+    width: 320px;
+    padding: 15px;
+}
+
+
+
+.form input{
+    /* font-family: "Roboto", sans-serif; */
+    outline: 0;
+    background: white;
+    width: 100%;
+    border: 1px solid black;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px; 
+}
+
+.form button{
+    /* font-family: "Roboto", sans-serif; */
+    outline: 0;
+    background: black;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    box-sizing: border-box;
+
+}

@@ -1,26 +1,57 @@
 import React from 'react';
-import logo from './logo.svg';
+import Footer from './Components/Footer/Footer';
+import Header from './Components/Header/Header';
 import './App.css';
+import "./index.css";
+import BookImage from '../src/BookImage.png'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+//importing Components
+import PostBookList from './Components/PostBookList/PostBookList'
+import ViewBookList from './Components/ViewBookList/ViewBookList'
+
+class App extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      activePage: ''
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="MainSection">
+          <div>
+           <img className="BookImage" src={BookImage} alt="Book Image"/>
+          </div>
+          <div className="Container">
+            <header>
+              <Header />
+            </header>
+            <nav>
+              <button onClick={() => this.setState({activePage: 'post'})}>Add to your list</button>
+              <button onClick={() => this.setState({activePage: 'favBooks'})}>Final list</button>
+            </nav>
+              {
+                this.state.activePage === 'post'
+                ?
+                <PostBookList />
+                : 
+                this.state.activePage === 'favBooks'
+                ?
+                <ViewBookList />
+                :
+                <PostBookList />
+              }
+          </div>
+        </div> 
+        <footer>
+          <Footer />
+        </footer>
+      </div>
+    );
+  }
 }
 
 export default App;
